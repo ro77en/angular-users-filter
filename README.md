@@ -1,27 +1,188 @@
-# UsersFilter
+# Users Filter List
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+This project is an Angular application that displays a list of users with functionalities to filter the list by name, status, and/or sign-up date. Additionally, you can click on a specific user to show full details about that user in the right panel.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Development](#development)
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To set up the project locally, follow these steps:
 
-## Build
+1. **Clone the repository:**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```bash
+   git clone https://github.com/your-username/users-filter.git
+   cd users-filter
+   ```
 
-## Running unit tests
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
+To start the application, run:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm start
+```
 
-## Further help
+This will serve the application at http://localhost:4200/. You can open this URL in your browser to view and interact with the user list.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Features
+
+- Filter Users:
+  - Filter the users by name.
+  - Filter the users by their status (active/inactive).
+  - Filter the users by their sign-up date.
+- User Details:
+  - Click on a user to view full details on the right panel.
+
+## Project Structure
+
+The project structure is as follows:
+
+```
+users-filter/
+├── src/
+│ ├── app/
+│ │ │── angular-material/
+│ │ ├── components/
+│ │ │ ├── filter/
+│ │ │ │ │── filter.component.html
+│ │ │ │ │── filter.component.scss
+│ │ │ │ │── filter.component.spec.ts
+│ │ │ │ │── filter.component.ts
+│ │ │ ├── user-details/
+│ │ │ │ ├── user-details.component.html
+│ │ │ │ ├── user-details.component.scss
+│ │ │ │ ├── user-details.component.spec.ts
+│ │ │ │ ├── user-details.component.ts
+│ │ │ ├── user-list/
+│ │ │ │ ├── user-list.component.html
+│ │ │ │ ├── user-list.component.scss
+│ │ │ │ ├── user-list.component.spec.ts
+│ │ │ │ ├── user-list.component.ts
+│ │ ├── data/
+│ │ │ ├── users-list.ts
+│ │ ├── interfaces/
+│ │ │ ├── user/
+│ │ │ │ ├── address.interface.ts
+│ │ │ │ ├── status.interface.ts
+│ │ │ │ ├── user.interface.ts
+│ │ │ ├── filter-options.interface.ts
+│ │ ├── pipes/
+│ │ │ ├── address.pipe.ts
+│ │ │ ├── dash-if-empty.pipe.ts
+│ │ │ ├── phone.pipe.ts
+│ │ │ ├── pipes.module.ts
+│ │ │ ├── status.pipe.ts
+│ │ ├── utils/
+│ │ │ ├── filter-users-list.ts
+│ │ ├── app-routing.module.ts
+│ │ ├── app.component.html
+│ │ ├── app.component.scss
+│ │ ├── app.component.spec.ts
+│ │ ├── app.component.ts
+│ │ ├── app.module.ts
+│ ├── assets/
+│ ├── styles/
+│ │ │── utils/
+│ │ │ ├── _text-align-center.scss
+│ ├── favicon.ico
+│ ├── index.html
+│ ├── main.ts
+│ ├── styles.scss
+├── .editorconfig
+├── .gitignore
+├── angular.json
+├── package-lock.json
+├── package.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.spec.json
+```
+
+## Dependencies
+
+### Core Dependencies
+
+- @angular/animations: ^17.3.0
+- @angular/cdk: ^17.3.10
+- @angular/common: ^17.3.0
+- @angular/compiler: ^17.3.0
+- @angular/core: ^17.3.0
+- @angular/forms: ^17.3.0
+- @angular/material: ^17.3.10
+- @angular/platform-browser: ^17.3.0
+- @angular/platform-browser-dynamic: ^17.3.0
+- @angular/router: ^17.3.0
+- date-fns: ^3.6.0
+- rxjs: ~7.8.0
+- tslib: ^2.3.0
+- zone.js: ~0.14.3
+
+### Development Dependencies
+
+- @angular-devkit/build-angular: ^17.3.6
+- @angular/cli: ^17.3.6
+- @angular/compiler-cli: ^17.3.0
+- @types/jasmine: ~5.1.0
+- jasmine-core: ~5.1.0
+- karma: ~6.4.0
+- karma-chrome-launcher: ~3.2.0
+- karma-coverage: ~2.2.0
+- karma-jasmine: ~5.1.0
+- karma-jasmine-html-reporter: ~2.1.0
+- typescript: ~5.4.2
+
+## Development
+
+### Running the application
+
+To run the application locally:
+
+```
+npm start
+```
+
+### Running tests
+
+To execute the tests:
+
+```
+npm test
+```
+
+### Building the project
+
+To build the project for production:
+
+```
+npm run build
+```
+
+### Watching for changes
+
+To continuously build the project in development mode:
+
+```
+npm run watch
+```
+
+---
+
+&nbsp;
+
+Feel free to contribute to this project by opening issues or submitting pull requests. If you have any questions or feedback, don't hesitate to reach out.
+
+Enjoy using the Users Filter List!
