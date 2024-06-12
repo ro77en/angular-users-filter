@@ -35,6 +35,9 @@ export class FilterComponent {
   @Output('resetFilter') resetFilterEmit = new EventEmitter();
 
   resetFilter() {
+    this.filterOptions.startDate = undefined;
+    this.filterOptions.endDate = undefined;
+    this.filterOptions.status = undefined;
     this.resetFilterEmit.emit();
   }
 }
