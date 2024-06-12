@@ -196,8 +196,6 @@ You can customize the user list in two ways:
 
 ---
 
-&nbsp;
-
 Feel free to contribute to this project by opening issues or submitting pull requests. If you have any questions or feedback, don't hesitate to reach out.
 
 Enjoy using the Users Filter List!
