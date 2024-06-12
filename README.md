@@ -10,6 +10,7 @@ This project is an Angular application that displays a list of users with functi
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
 - [Development](#development)
+- [Customization](#customization)
 
 ## Installation
 
@@ -178,6 +179,20 @@ To continuously build the project in development mode:
 ```
 npm run watch
 ```
+
+## Customization
+
+You can customize the user list in two ways:
+
+1. **Modifying `users-list.ts` directly:**:
+
+   - Open the `src/app/data/users-list.ts` file.
+   - Edit the `UsersList` array to include yor own user data
+
+2. **Using an HTTP request:**
+
+   - Open the `src/app/app.component.ts` file.
+   - In the `ngOnInit()` method, you can add your HTTP request to fetch user data.
 
 ---
 
