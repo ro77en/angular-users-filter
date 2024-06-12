@@ -39,6 +39,10 @@ export class AppComponent implements OnInit {
     let filteredList: IUser[] = [];
 
     filteredList = this.filterUsersListByName(filterOptions.name, usersList);
+    filteredList = this.filterUsersListByStatus(
+      filterOptions.status,
+      filteredList
+    );
 
     return filteredList;
   }
@@ -53,6 +57,18 @@ export class AppComponent implements OnInit {
     const filteredList = usersList.filter((user) =>
       user.nome.toLowerCase().includes(name.toLowerCase())
     );
+
+    return filteredList;
+  }
+
+  filterUsersListByStatus(status: boolean | undefined, usersList: IUser[]) {
+    const EMPTY_STATUS = status === undefined;
+
+    if (EMPTY_STATUS) {
+      return usersList;
+    }
+
+    const filteredList = usersList.filter((user) => user.ativo === status);
 
     return filteredList;
   }
