@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { IFilterOptions } from '../../interfaces/filter-options.interface';
+import { IUser } from '../../interfaces/user/user.interface';
 
 @Component({
   selector: 'app-filter',
@@ -29,5 +30,11 @@ export class FilterComponent {
 
   onFilter() {
     this.onFilterEmit.emit(this.filterOptions);
+  }
+
+  @Output('resetFilter') resetFilterEmit = new EventEmitter();
+
+  resetFilter() {
+    this.resetFilterEmit.emit();
   }
 }

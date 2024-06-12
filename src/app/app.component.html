@@ -2,7 +2,10 @@
   <div class="left-container">
     <div class="top-div">
       <!-- Top Div Content -->
-      <app-filter (onFilter)="onFilter($event)"></app-filter>
+      <app-filter
+        (onFilter)="onFilter($event)"
+        (resetFilter)="resetFilter()"
+      ></app-filter>
     </div>
     <div class="main-left-div">
       <!-- Left Div Content (80% Height) -->

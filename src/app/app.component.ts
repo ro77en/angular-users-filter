@@ -35,6 +35,10 @@ export class AppComponent implements OnInit {
     );
   }
 
+  resetFilter() {
+    this.usersListFiltered = UsersList;
+  }
+
   filterUsersList(filterOptions: IFilterOptions, usersList: IUser[]): IUser[] {
     let filteredList: IUser[] = [];
 
